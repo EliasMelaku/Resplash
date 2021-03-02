@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Wallpaper App</string>
+
+
+    <string name="loadErrorMessage">Couldnt load images</string>
+    <string name="noResultsFound">No results found for this query</string>
+    <string name="retry">Retry</string>
+
+
+    <string name="choose_catergory">Choose catergory</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_text">Title Text</string>
+
+
+    <string name="home">Home</string>
+    <string name="categories">Categories</string>
+    <string name="Favorites">Favorites</string>
+
+
+    <string name="animals">Animals</string>
+    <string name="texture">Texture</string>
+    <string name="nature">Nature</string>
+    <string name="architecture">Architecture</string>
+    <string name="cars">Cars</string>
+    <string name="quotes">Quotes</string>
+    <string name="technology">Technology</string>
+    <string name="sports">Sports</string>
+    <string name="set_wallpaper">SET WALLPAPER</string>
+    <string name="search_images">Search Images</string>
+
+
+</resources>

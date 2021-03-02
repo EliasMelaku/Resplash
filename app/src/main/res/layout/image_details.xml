@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/to_be_wallpaper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.details.DetailsFragment">
+
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:scaleType="centerCrop"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/set_wallpaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/set_wallpaper"
+        android:visibility="invisible" />
+
+    <ProgressBar
+        android:id="@+id/largeImageProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/image_preview_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_corner_small"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/image_view_preview_case"
+            android:layout_width="160dp"
+            android:layout_height="323dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/pixel"
+            android:scaleType="fitXY" />
+        <ImageView
+            android:id="@+id/image_view_preview"
+            android:layout_width="150dp"
+            android:layout_height="296dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="200dp"
+            android:scaleType="fitXY" />
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
