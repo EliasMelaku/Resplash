@@ -1,9 +1,11 @@
 package com.project_app.wallpaper_app.UI.details
 
 import android.app.WallpaperManager
+import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.opengl.Visibility
+import android.os.AsyncTask
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -90,12 +92,30 @@ class DetailsFragment : Fragment(R.layout.image_details), View.OnClickListener {
     }
 
     private fun setWallpaper() {
+//        change text and disable button
+        set_wallpaper.isEnabled = false
+        set_wallpaper.text = "Wallpaper is Set"
         val bitmap: Bitmap = image_view.drawable.toBitmap()
-
-        val wallpaperManager: WallpaperManager = WallpaperManager.getInstance(context)
-        wallpaperManager.setBitmap(bitmap)
+        val task:SetWallpaperTask = SetWallpaperTask(requireContext(), bitmap)
+        task.execute(true)
     }
 
+
+    companion object{
+        class SetWallpaperTask internal constructor (val context: Context, private val bitmap:Bitmap):
+                AsyncTask<Boolean, String, String>(){
+            override fun doInBackground(vararg params: Boolean?): String {
+                val wallpaperManager:WallpaperManager = WallpaperManager.getInstance(context)
+                wallpaperManager.setBitmap(bitmap)
+                return "Wallpaper set"
+            }
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Glide.with(requireContext()).clear(image_view)
+    }
 
 }
 

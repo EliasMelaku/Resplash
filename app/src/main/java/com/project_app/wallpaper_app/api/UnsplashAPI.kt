@@ -1,5 +1,6 @@
 package com.project_app.wallpaper_app.api
 
+//import androidx.viewbinding.BuildConfig
 import com.project_app.wallpaper_app.BuildConfig
 import retrofit2.http.GET
 import retrofit2.http.Headers
