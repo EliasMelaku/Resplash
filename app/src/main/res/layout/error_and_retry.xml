@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -11,15 +12,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <ImageView
+        android:id="@+id/noWall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/no_wall" />
+
     <TextView
         android:id="@+id/errorMessage"
         android:text="@string/loadErrorMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-    <Button
+    <ImageButton
         android:id="@+id/button_retry"
-        android:text="@string/retry"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:src="@drawable/retry36" />
+<!--    <Button-->
+<!--        android:id="@+id/button_retry"-->
+<!--        android:text="@string/retry"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"/>-->
 
 </LinearLayout>
